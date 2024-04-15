@@ -1,13 +1,8 @@
-let eyeicon   = document.getElementById('eyeicon');
-let password  = document.getElementById('password');
+const eyeicon = document.getElementById("eyeicon");
+const password = document.getElementById("password");
 
+eyeicon.addEventListener("click", () => {
+  password.type = password.type === "password" ? "text" : "password";
+  eyeicon.src   = password.type === "password" ? "img/eye-close.png" : "img/eye-open.png";
+});
 
-eyeicon.onclick = function () {
-    if ( password.type == 'password' ) {
-        password.type  = 'text';
-        eyeicon.src    = "img/eye-open.png";
-    } else {
-        password.type  = 'password';
-        eyeicon.src    = 'img/eye-close.png';
-    }
-}
